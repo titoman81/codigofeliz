@@ -612,11 +612,13 @@
 
 /* Fix: center and prevent zoom/crop for About logo (logo_final.png) in .img-border */
 .img-border img[src$="logo_final.png"] {
-    /* keep absolute positioning but center the image inside the bordered box */
+    /* keep absolute positioning but center the image inside the bordered box
+       Nudge slightly up and left for a better visual alignment */
     position: absolute;
     top: 50% !important;
     left: 50% !important;
-    transform: translate(-50%, -50%) !important;
+    /* move a bit further left and up: increase negative translate X and Y */
+    transform: translate(-54%, -56%) !important;
     width: auto !important;
     height: auto !important;
     max-width: calc(100% - 6rem) !important;
